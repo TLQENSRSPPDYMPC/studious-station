@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Monk Diamond</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+      * {
+        padding: 0;
+        border: 0;
+        margin: 0;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.568rem;
+        color: #0c0c0c;
+        background-color: #f0f3ff;
+      }
+
+      .header__container--main {
+        display: block;
+        text-align: center;
+        line-height: 3.7rem;
+      }
+
+      .header__text--title {
+        height: 192px;
+        width: 100%;
+        line-height: 12rem;
+        color: whitesmoke;
+        background-color: #211951;
+      }
+
+      .header__text--subtitle {
+        height: 64px;
+        width: 100%;
+        border-top: 3px solid #afa3fa;
+        background-color: #836fff;
+      }
+
+      .body__container--wrapper {
+        margin: 2rem 3rem;
+      }
+
+      .body__main--container {
+        height: auto;
+        width: 66.29%;
+        padding: 0 0 0 2rem;
+        float: left;
+      }
+
+      .main__img--team {
+        margin-top: 2rem;
+      }
+
+      .aside__img--diamond {
+        height: 180px;
+        width: 100%;
+        margin-bottom: 1rem;
+        border: 5px solid #836fff;
+      }
+      .body__aside--container {
+        height: auto;
+        width: 25%;
+        padding: 0 1rem;
+        float: right;
+      }
+
+      .aside__text--content,
+      .aside__fig--description {
+        background-color: #ffffff;
+        height: auto;
+        width: 100%;
+        text-align: center;
+        border: 5px solid #836fff;
+      }
+      .aside__fig--description {
+        border-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="body__header--container">
+      <div class="header__container--main">
+        <h1 class="header__text--title">THE MONK DIAMOND DISCOVERY</h1>
+        <h2 class="header__text--subtitle">
+          A RARE DIAMOND HAS BEEN DISCOVERED IN SIBERIA!
+        </h2>
+      </div>
+    </header>
+    <div class="body__container--wrapper">
+      <main class="body__main--container">
+        <p class="main__text--content">
+          Professor Bairstone and Dr Day have made a sensational discovery.
+          <br />
+          They have discovered the Monk Diamond in a remote cave in Siberia.<br />
+          Professor Bairstone's dog, Ernest, sniffed out the diamond.<br />
+          <br />
+          The jewel was stolen three years ago from the House of Volkov.<br />
+          The prime suspects in the theft were the Bond Brothers.<br />
+          The team thinks the diamond had been hidden by the thieves.<br />
+          They sent this photo from their camp:<br />
+        </p>
+        <img
+          src="TeamPhoto.jpg"
+          alt="Photo of the team that discovered the diamond"
+          class="main__img--team"
+        />
+      </main>
+      <aside class="body__aside--container">
+        <div class="aside__container--main">
+          <figure class="aside__fig--container">
+            <img
+              src="diamond.jpg"
+              alt="The Monk Diamond"
+              class="aside__img--diamond"
+            />
+            <figcaption class="aside__fig--description">
+              The Monk Diamond
+            </figcaption>
+          </figure>
+          <p class="aside__text--content">
+            Fact File<br />
+            Carats: 300<br />
+            Colour: Green<br />
+            Value: Over £10 million<br />
+          </p>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
