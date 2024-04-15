@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password</title>
+    <script>
+      function checkPassword() {
+        const PASSWORD = "Ernesto2001";
+        var password = document.getElementById("passwordBox");
+        var passwordText = passwordBox.value;
+
+        if (passwordText == PASSWORD) {
+          return true;
+        }
+        alert("Access denied: Incorrect password!");
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="body__text--title">THE MONK DIAMOND DISCOVER</h1>
+    <p class="body__text--paragraph">
+      Please, enter the password to view this website
+    </p>
+    <p class="body__text--paragraph">
+      Password:
+      <input type="password" name="passwordBox" id="passwordBox" />
+    </p>
+    <a
+      href="../The Monk Diamond/index.html"
+      class="body__link--site"
+      onclick="return checkPassword();"
+      >Click here to access the main website</a
+    >
+  </body>
+</html>
