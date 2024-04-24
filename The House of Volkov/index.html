@@ -4,46 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The House of Volkov</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-
-      * {
-        padding: 0;
-        border: 0;
-        margin: 0;
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      function addItem() {
+        var newItem = document.createElement("div");
+        newItem.innerHTML = document.getElementById("textBox1").value;
+        newItem.classList.add("list-item");
+        newItem.onclick = removeItem;
+        document.getElementById("list").appendChild(newItem);
+        savedList();
       }
 
-      body {
-        background-color: whitesmoke;
-        color: #353535;
-        font-family: "Raleway", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 100;
-        font-style: normal;
-        height: 100%;
-        width: 100%;
+      function removeItem() {
+        document.getElementById("list").removeChild(this);
+        savedList();
       }
 
-      .body__container--wrapper {
-        display: block;
-        height: 100%;
-        width: 100%;
-        text-align: center;
-        margin: 5rem 0;
+      function savedList() {
+        localStorage.storedList = document.getElementById("list").innerHTML;
       }
 
-      input[type="button"] {
-        background-color: pink;
-        height: 35px;
-        width: 80px;
+      function loadList() {
+        document.getElementById("list").innerHTML = localStorage.storedList;
+        for (var i = 0; i < list.children.length; i++) {
+          list.children[i].onclick = removeItem;
+        }
       }
-
-      #textBox1 {
-        height: 38px;
-        width: calc(455px - 1rem);
-        padding: 0 1rem;
-      }
-    </style>
+    </script>
   </head>
   <body>
     <div class="body__container--wrapper">
@@ -57,8 +44,25 @@
       />
       <br />
       <br />
-      <input type="button" value="Add Item" />
+      <input type="button" value="Add Item" onclick="addItem();" />
       <br />
+      <br />
+      <hr
+        style="
+          height: 1px;
+          width: 80%;
+          margin: auto;
+          border-width: 0;
+          color: #353535;
+          background-color: #353535;
+        "
+      />
+      <div id="list"><br /><br /></div>
+      <script>
+        if (localStorage.storedList) {
+          loadList();
+        }
+      </script>
     </div>
   </body>
 </html>
